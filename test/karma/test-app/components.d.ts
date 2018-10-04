@@ -142,6 +142,19 @@ export namespace Components {
     'value'?: string;
   }
 
+  interface LifecycleBasicSlotsA {}
+  interface LifecycleBasicSlotsAAttributes extends StencilHTMLAttributes {}
+
+  interface LifecycleBasicSlotsB {}
+  interface LifecycleBasicSlotsBAttributes extends StencilHTMLAttributes {
+    'onLifecycleLoad'?: (event: CustomEvent) => void;
+  }
+
+  interface LifecycleBasicSlotsC {}
+  interface LifecycleBasicSlotsCAttributes extends StencilHTMLAttributes {
+    'onLifecycleLoad'?: (event: CustomEvent) => void;
+  }
+
   interface LifecycleBasicA {}
   interface LifecycleBasicAAttributes extends StencilHTMLAttributes {}
 
@@ -370,6 +383,9 @@ declare global {
     'LifecycleAsyncA': Components.LifecycleAsyncA;
     'LifecycleAsyncB': Components.LifecycleAsyncB;
     'LifecycleAsyncC': Components.LifecycleAsyncC;
+    'LifecycleBasicSlotsA': Components.LifecycleBasicSlotsA;
+    'LifecycleBasicSlotsB': Components.LifecycleBasicSlotsB;
+    'LifecycleBasicSlotsC': Components.LifecycleBasicSlotsC;
     'LifecycleBasicA': Components.LifecycleBasicA;
     'LifecycleBasicB': Components.LifecycleBasicB;
     'LifecycleBasicC': Components.LifecycleBasicC;
@@ -440,6 +456,9 @@ declare global {
     'lifecycle-async-a': Components.LifecycleAsyncAAttributes;
     'lifecycle-async-b': Components.LifecycleAsyncBAttributes;
     'lifecycle-async-c': Components.LifecycleAsyncCAttributes;
+    'lifecycle-basic-slots-a': Components.LifecycleBasicSlotsAAttributes;
+    'lifecycle-basic-slots-b': Components.LifecycleBasicSlotsBAttributes;
+    'lifecycle-basic-slots-c': Components.LifecycleBasicSlotsCAttributes;
     'lifecycle-basic-a': Components.LifecycleBasicAAttributes;
     'lifecycle-basic-b': Components.LifecycleBasicBAttributes;
     'lifecycle-basic-c': Components.LifecycleBasicCAttributes;
@@ -613,6 +632,24 @@ declare global {
   var HTMLLifecycleAsyncCElement: {
     prototype: HTMLLifecycleAsyncCElement;
     new (): HTMLLifecycleAsyncCElement;
+  };
+
+  interface HTMLLifecycleBasicSlotsAElement extends Components.LifecycleBasicSlotsA, HTMLStencilElement {}
+  var HTMLLifecycleBasicSlotsAElement: {
+    prototype: HTMLLifecycleBasicSlotsAElement;
+    new (): HTMLLifecycleBasicSlotsAElement;
+  };
+
+  interface HTMLLifecycleBasicSlotsBElement extends Components.LifecycleBasicSlotsB, HTMLStencilElement {}
+  var HTMLLifecycleBasicSlotsBElement: {
+    prototype: HTMLLifecycleBasicSlotsBElement;
+    new (): HTMLLifecycleBasicSlotsBElement;
+  };
+
+  interface HTMLLifecycleBasicSlotsCElement extends Components.LifecycleBasicSlotsC, HTMLStencilElement {}
+  var HTMLLifecycleBasicSlotsCElement: {
+    prototype: HTMLLifecycleBasicSlotsCElement;
+    new (): HTMLLifecycleBasicSlotsCElement;
   };
 
   interface HTMLLifecycleBasicAElement extends Components.LifecycleBasicA, HTMLStencilElement {}
@@ -913,6 +950,9 @@ declare global {
     'lifecycle-async-a': HTMLLifecycleAsyncAElement
     'lifecycle-async-b': HTMLLifecycleAsyncBElement
     'lifecycle-async-c': HTMLLifecycleAsyncCElement
+    'lifecycle-basic-slots-a': HTMLLifecycleBasicSlotsAElement
+    'lifecycle-basic-slots-b': HTMLLifecycleBasicSlotsBElement
+    'lifecycle-basic-slots-c': HTMLLifecycleBasicSlotsCElement
     'lifecycle-basic-a': HTMLLifecycleBasicAElement
     'lifecycle-basic-b': HTMLLifecycleBasicBElement
     'lifecycle-basic-c': HTMLLifecycleBasicCElement
@@ -983,6 +1023,9 @@ declare global {
     'lifecycle-async-a': HTMLLifecycleAsyncAElement;
     'lifecycle-async-b': HTMLLifecycleAsyncBElement;
     'lifecycle-async-c': HTMLLifecycleAsyncCElement;
+    'lifecycle-basic-slots-a': HTMLLifecycleBasicSlotsAElement;
+    'lifecycle-basic-slots-b': HTMLLifecycleBasicSlotsBElement;
+    'lifecycle-basic-slots-c': HTMLLifecycleBasicSlotsCElement;
     'lifecycle-basic-a': HTMLLifecycleBasicAElement;
     'lifecycle-basic-b': HTMLLifecycleBasicBElement;
     'lifecycle-basic-c': HTMLLifecycleBasicCElement;
